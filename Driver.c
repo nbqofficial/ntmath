@@ -11,7 +11,7 @@ VOID DbgPrintFloat(_In_ float x) // SPECIAL THANKS TO FLAPJACKS (https://github.
 {
 	int ax = (int)x; // converts float to int until the decimal point
 	int bx = qabs((int)(x * 1000) % 1000); // rest of the float after decimal point
-	DbgPrintEx(0, 0, "%d.%03d", ax, bx); // prints out the float value in kernel debug (DebugView)
+	DbgPrintEx(0, 0, "%d.%03d\n", ax, bx); // prints out the float value in kernel debug (DebugView)
 }
 
 VOID DriverUnload(_In_ PDRIVER_OBJECT DriverObject) // basic driver unload routine
